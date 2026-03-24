@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Martins Business & Design</title>
+
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background:#0a1f44; margin:0; color:white; }
+
+    .logo-top {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      width: 80px;
+    }
+
+    .container { max-width:700px; margin:100px auto 40px; padding:30px; }
+
+    .header { text-align:center; margin-bottom:30px; }
+
+    .title { font-size:28px; font-weight:bold; }
+
+    .subtitle { font-size:14px; color:#cfd8dc; }
+
+    .section { margin-top:30px; }
+
+    .section h3 {
+      border-bottom:1px solid rgba(255,255,255,0.2);
+      padding-bottom:5px;
+    }
+
+    .btn {
+      display:block;
+      width:100%;
+      margin:10px 0;
+      padding:15px;
+      border:none;
+      border-radius:12px;
+      font-size:15px;
+      background:linear-gradient(135deg,#1e3a8a,#0a1f44);
+      color:white;
+      cursor:pointer;
+      text-align:left;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow:0 8px 20px rgba(0,0,0,0.4);
+    }
+
+  </style>
+</head>
+<body>
+
+<img src="logo.png" class="logo-top">
+
+<div class="container">
+
+  <div class="header">
+    <div class="title">Martins Business & Design</div>
+    <div class="subtitle">Atendimento Inteligente via WhatsApp</div>
+  </div>
+
+  <div class="section">
+    <h3>Pessoa Física</h3>
+    <button class="btn" onclick="enviar('Regularização de CPF')">Regularização de CPF</button>
+    <button class="btn" onclick="enviar('Emissão de guias GPS e DARF')">Emissão de guias GPS e DARF</button>
+    <button class="btn" onclick="enviar('Declaração de IRPF')">Declaração de IRPF</button>
+    <button class="btn" onclick="enviar('Análise de situação na Receita Federal')">Análise de situação na Receita Federal</button>
+    <button class="btn" onclick="enviar('Suporte e dúvidas')">Suporte e dúvidas</button>
+  </div>
+
+  <div class="section">
+    <h3>MEI</h3>
+    <button class="btn" onclick="enviar('Suporte e orientações MEI')">Suporte e orientações</button>
+    <button class="btn" onclick="enviar('Emissão de DAS')">Emissão de DAS</button>
+    <button class="btn" onclick="enviar('Emissão DASN-SIMEI')">Emissão DASN-SIMEI</button>
+    <button class="btn" onclick="enviar('Emissão de NFS-e')">Emissão de NFS-e</button>
+  </div>
+
+  <div class="section">
+    <h3>Autônomo</h3>
+    <button class="btn" onclick="enviar('Emissão de guias GPS e DARF Autônomo')">Emissão de guias GPS e DARF</button>
+    <button class="btn" onclick="enviar('Análise de situação na Receita Federal Autônomo')">Análise de situação na Receita Federal</button>
+    <button class="btn" onclick="enviar('Suporte e dúvidas Autônomo')">Suporte e dúvidas</button>
+  </div>
+
+  <div class="section">
+    <h3>Suporte Acadêmico</h3>
+    <button class="btn" onclick="enviar('Organização e estrutura de trabalhos (ABNT)')">Organização e estrutura de trabalhos (ABNT)</button>
+    <button class="btn" onclick="enviar('Criação de slides (PowerPoint/Canva)')">Criação de slides</button>
+    <button class="btn" onclick="enviar('Mapas mentais')">Mapas mentais</button>
+    <button class="btn" onclick="enviar('Apostilas simples')">Apostilas simples</button>
+    <button class="btn" onclick="enviar('Materiais de estudo')">Materiais de estudo</button>
+    <button class="btn" onclick="enviar('Gráficos e tabelas (Excel)')">Gráficos e tabelas (Excel)</button>
+  </div>
+
+  <div class="section">
+    <h3>Design Visual</h3>
+    <button class="btn" onclick="enviar('Criação de logo simples')">Logo simples</button>
+    <button class="btn" onclick="enviar('Criação de logo minimalista')">Logo minimalista</button>
+    <button class="btn" onclick="enviar('Criação de logo profissional')">Logo profissional</button>
+    <button class="btn" onclick="enviar('Versões da logo (preto, branco, transparente)')">Versões da logo</button>
+    <button class="btn" onclick="enviar('Definição de tipografia')">Definição de tipografia</button>
+    <button class="btn" onclick="enviar('Criação de cardápios')">Cardápios</button>
+    <button class="btn" onclick="enviar('Cartões digitais')">Cartões digitais</button>
+    <button class="btn" onclick="enviar('Posts para divulgação')">Posts para divulgação</button>
+    <button class="btn" onclick="enviar('Conteúdos educativos e explicativos')">Conteúdos educativos</button>
+  </div>
+
+</div>
+
+<script>
+  function enviar(servico){
+    const numero = "55SEUNUMEROAQUI";
+    const mensagem = `Olá! Vim pelo portal e gostaria de atendimento para: ${servico}`;
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
