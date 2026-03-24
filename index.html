@@ -9,13 +9,15 @@
     body { font-family: 'Segoe UI', sans-serif; background:#0a1f44; margin:0; color:white; }
     
   .logo-top {
-  position: fixed;
-  top: 15px;
-  right: 20px;
-  width: 140px;
+  position: sticky;
+  top: 10px;
+  float: right;
+  width: 110px;
+  z-index: 10;
+  margin-bottom: 10px;
 }
-    .container {
-  margin-top: 150px;
+    overflow: hidden;
+    overflow: auto;
 }
     body::before {
   content: "";
